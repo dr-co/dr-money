@@ -1,6 +1,6 @@
 package DR::Money;
 
-use 5.014002;
+use 5.008008;
 use strict;
 use warnings;
 
@@ -45,7 +45,7 @@ DR::Money - module to manipulate by money in perl scripts
     $m += 2.3;          # 4.60
     $m += Money(4.2);   # 8.80
 
-The module provides negative moneys.
+The module supports negative moneys.
 
 =head1 Functions
 
@@ -424,6 +424,12 @@ sub _int {
 }
 
 
+=head1 COPYRIGHT AND LICENSE
 
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.8 or,
+at your option, any later version of Perl 5 you may have available
+
+=cut
 
 1;

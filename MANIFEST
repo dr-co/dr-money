@@ -4,3 +4,11 @@ MANIFEST
 README
 lib/DR/Money.pm
 t/010-dr-money.t
+debian/source/format
+debian/rules
+debian/changelog
+debian/control
+debian/compat
+debian/watch
+debian/libdr-money-perl.docs
+debian/copyright
