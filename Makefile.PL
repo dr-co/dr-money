@@ -10,3 +10,6 @@ WriteMakefile(
       (ABSTRACT_FROM  => 'lib/DR/Money.pm', # retrieve abstract from module
        AUTHOR         => 'Dmitry E. Oboukhov <unera@>') : ()),
 );
+
+open my $fh, '>>', 'Makefile';
+print $fh "\nTEST_VERBOSE=1\n";
