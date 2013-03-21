@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+lib/DR/Money.pm
+t/010-dr-money.t
