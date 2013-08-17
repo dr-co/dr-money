@@ -11,6 +11,7 @@ WriteMakefile(
     META_MERGE => {
         resources => {
             homepage => 'https://github.com/dr-co/dr-money',
+            repository => 'https://github.com/dr-co/dr-money',
             bugtracker => 'https://github.com/dr-co/dr-money/issues',
         }
     }
