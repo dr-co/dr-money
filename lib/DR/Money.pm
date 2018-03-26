@@ -10,7 +10,7 @@ our %EXPORT_TAGS = ( 'all' => [ qw(Money) ] );
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 our @EXPORT = qw(Money);
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use overload
     '""'        => \&value,
@@ -32,6 +32,8 @@ use overload
     '*='        => \&_mulself,
     '/='        => \&_divself,
 ;
+
+sub TO_JSON { shift->value };
 
 
 =head1 NAME

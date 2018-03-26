@@ -6,7 +6,7 @@ use utf8;
 use open qw(:std :utf8);
 use lib qw(lib ../lib);
 
-use Test::More tests    => 54;
+use Test::More tests    => 55;
 use Encode qw(decode encode);
 
 
@@ -45,6 +45,7 @@ cmp_ok $m2->value, '==', 25.23, 'copy Constructor 25.23';
 $m2 = Money('12.11');
 cmp_ok $m1->value, '==', 25.23, 'first value left unchanged 25.23';
 cmp_ok $m2->value, '==', 12.11, 'second value is changed 12.11';
+
 
 is --$m1, Money('25.22'), 'decrement';
 is ++$m1, Money('25.23'), 'increment';
@@ -85,3 +86,5 @@ ok !eval { (123 / Money(0)) || 1 }, 'division by zero';
 like $@ => qr{by zero}, 'error message';
 ok !eval { (Money(123) / Money(0)) || 1 }, 'division by zero';
 like $@ => qr{by zero}, 'error message';
+
+is $m1->TO_JSON, $m1->value, 'TO_JSON';
